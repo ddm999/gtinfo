@@ -1,0 +1,223 @@
+                            # === CarCodeList ===
+- ShortName: "180SX Type X '96"
+- Maker: 28                 # Tuner
+- Year: 2017                # Year
+- Category: "Road"          # Category
+# Road = 0, Race, ProTuned
+- Class: "GRN"              # DefaultCarClass
+# GR1 = 0, GR2, GR3, GR4, GRA, GRB, GRX, GRN
+- Price: 10000              # Price
+- PartPrice: 1              # TuningPartsPrice
+- MaintainPrice: 1          # MaintenancePrice
+- HasHorn: true             # HornID > 0
+- IngameSpecsHidden: false  # CarSpecHiddenID == 1
+
+- ActiveWing:               # === ACTIVEWING ===
+    enabled: true           # downForce > 0
+    downForce: 40           # activeWingDownForce
+    velocityKph: 80         # activeWingVelocity1
+    drag: 0.12              # activeWingDrag1
+    # note: more complicated parts
+- AirBrake:
+    enabled: true           # airBrakeAvailable
+    deploy_minSpeedKph: 96  # airBrakeDeploymentV
+    deploy_brakePct: 50     # airBrakeDeploymentBrk
+    end_minSpeedKph: 60     # airBrakeForceClosingV
+    end_brakePct: 20        # airBrakeForceClosingBrk
+    # note: more complicated parts
+- CorneringFlaps:
+    enabled: true           # corneringFlagType > 0
+    # note: more complicated parts
+- DRS:
+    enabled: true           # DRS_type > 0
+    deploy_minKph: 145      # DRS_ActivationVelocity
+    end_minKph: 120         # DRS_DeactivationVelocity
+    deploy_delaySecs: 0.8   # DRS_ActivationTime
+    end_delaySecs: 0.3      # DRS_DeactivationTime
+    # note: more complicated parts
+
+- BoP:                      # === BoP ===
+    powerMod: 0.85          # BoPPowerModifyRatio
+    weightMod: 1.2          # BoPWeightModifyRatio
+
+- Chassis:                  # === CHASSIS ===
+    lengthMM: 5815.0        # length
+    heightMM: 1930.0        # height
+    widthMM: 2280.0         # width
+    wheelbaseMM: 3700.0     # wheelbase
+    massKG: 2555.0          # mass
+    weightBalanceF: 32.0    # percentageF
+    cogheightMM: 575.0      # cgheight
+    fueltankL: 100          # GasCapacity
+    drag: 0.188             # cd
+    downforceF:
+        min: 1.5            # clMINF
+        max: 1.7            # clMAXF
+        def: 1.6            # clDFF
+    downforceR:
+        min: 1.8            # clMINR
+        max: 2.2            # clMAXR
+        def: 2.0            # clDFR
+    aeroType: 8             # whichAeroMap
+    # 8 = singleseater
+    # 6, 3, 2 = unique to this car
+    # 1 = standard
+    hasTorqueVectoring: false # torqueVectoring_Type > 0
+
+- Drivetrain:               # === DRIVETRAIN ===
+    type: "4WD"             # drivetypeName
+    4wdSystem: 13           # type4WD
+    enginebraking: 25.3     # enginebrake
+    flywheelInertia: 0.214  # iflywheel
+
+- Engine:                   # === ENGINE ===
+    form: "V8"              # enginetype
+    displacementCC: 4200    # displacement
+    boreMM: 94              # bore
+    strokeMM: 84            # stroke
+    cams: "DOHC"            # cam
+    compressionRatio: 12.2  # comp_ratio
+    rpmlimiter: 4000.0      # revlimit
+    torqueGraph:            # torqueA-torqueX
+    - 29.86
+    - 37.23
+    - 44.1
+    - 44.03
+    - 43.0
+    - 36.53
+    - 27.76
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    rpmGraph:               # rpmA-rpmX
+    - 1000.0
+    - 1500.0
+    - 2000.0
+    - 2500.0
+    - 3000.0
+    - 3500.0
+    - 4000.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    torqueModifier: 100.0   # torquevol
+    redline: 8700.0         # RedLine * 100.0
+    fuelUsageModifier: 120  # GasConsumptionRate
+    powerType: 0            # powersourcetype
+    # IC = 0, HV, EV, other
+    engineType: 0           # icEngineType
+    # None = 0, Reciprocating, Rotary, Diesel, 2cycle, EV
+    engineName: "Laser-Pulse-2X" # EngineDefinitionModel
+
+#- EngineParts:                  # === EnginePartsList ===
+#    hasBoreUp: false            # DISPLACEMENT_1
+#    hasStrokeUp: false          # DISPLACEMENT_2
+#    hasBoreUpS: false           # DISPLACEMENT_3
+#    hasStrokeUpS: false         # DISPLACEMENT_4
+#    hasSportsComputer: false    # COMPUTER_1
+#    hasFullComputer: false      # COMPUTER_2
+#    hasStockAntilag: false      # ANTILAG_0
+#    hasAntilag: false           # ANTILAG_1
+#    hasTUNE1: false           # NA_TUNE_1
+#    hasTUNE2: false           # NA_TUNE_2
+#    hasTUNE3: false           # NA_TUNE_3
+#    hasTUNE4: false           # NA_TUNE_4
+#    hasTUNE5: false           # NA_TUNE_5
+#    hasTUNE6: false           # NA_TUNE_6
+#    hasTUNE7: false           # NA_TUNE_7
+#    hasTURBINE1: false           # TURBINE_KIT_1
+#    hasTURBINE2: false           # TURBINE_KIT_2
+#    hasTURBINE3: false           # TURBINE_KIT_3
+#    hasTURBINE4: false           # TURBINE_KIT_4
+#    hasTURBINE3: false           # TURBINE_KIT_3
+
+- Gearbox:                  # === GEAR ===
+    gearboxType: 11         # geartype
+    gears: 7                # Nshift
+    usesCalcGears: false    # gearflag == 1
+    maxspeedDF: 170.0       # maxspeedDF
+    gearRatios:             # Gear1st-Gear11th
+    - 2.317
+    - 1.885
+    - 1.575
+    - 1.361
+    - 1.212
+    - 1.094
+    - 0.989
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    reverseRatio: 4.334     # GearReverse
+    finalGearRatio: 3.4     # finalgearDF
+
+- ElectricMotor:            # === MOTOR ===
+    batterySizeKWH: 5.0     # batteryCapacity
+    rwdPowerKW: 50.0        # electricMotor
+    rwdTorqueNM: 160.0      # electricMotorTorque
+    fwdPowerKW: 50.0        # electricSubMotorPower
+    fwdTorqueNM: 160.0      # electricSubMotorTorque
+    heatCharge: 20          # ersH_generator
+    engineAssist:
+        enabled: true       # motorAssist_gEnd > 0.0
+        deployKphGraph:
+        - 80                    # motorAssist_vStart
+        - 120                   # motorAssist_vSat1
+        - 240                   # motorAssist_vSat2
+        - 250                   # motorAssist_vEnd
+        deployMultGraph:
+        - 0.0                   # always 0.0
+        - 0.5                   # motorAssist_gSat
+        - 1.0                   # motorAssist_gEnd
+        overtakeButton: 2       # motorAssist_releaseByNitro
+        # no = 0, unknown, yes
+        brakeCharge: 100        # motorAssist_brkOffChargeRate
+        brakeForce: 100         # motorAssist_thOffDecelRate
+    mainMotor:
+        enabled: true       # mainMotorRegenSideGDependency > 0
+
+- Overtake:                 # === NOS ===
+    capacity: 0             # Capacity
+    torque: 10.0            # TorqueVolume
+
+- Steering:                 # === STEER ===
+    a: b
+
+- Supercharger:             # === SUPERCHARGER ===
+    a: b
+
+- Suspension:               # === SUSPENSION ===
+    a: b
+
+- Turbo:                    # === TURBINEKIT ===
+    a: b
+
+- DefaultTyres: "RS"        # 
